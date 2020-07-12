@@ -88,7 +88,6 @@ line_segment gcm1 ( line_segment a, line_segment b){
 	return a; 
 }
 
-// removing the recursion from the previous algorithm  
 
 
 // Main code driver, using randomly generated
@@ -101,7 +100,7 @@ int main(){
 
 	for ( int i = 1; i <= 20; i++) {
 		auto a = uni(rng), b = uni(rng); 
-		auto result = gcm1(a,b); 
+		auto result = gcm_norecurse(a,b); 
 
 		std::cout << "GCD(" << a << "," << b << ") = " 
 			<< result << ": " << gcm0(a,b) << std::endl; 
